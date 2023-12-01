@@ -21,7 +21,7 @@ public class SurveyController {
 
     @GetMapping("/home")
     public String home(){
-        return  "Campus Survey APP running on Rancher after Jenkins Build";
+        return  "Campus Survey APP";
     }
 
 
