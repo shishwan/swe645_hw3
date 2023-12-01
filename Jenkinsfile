@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Building the JAR ...'
                 sh 'java -version'
-                sh 'mvn clean install'  // Assuming Maven is used to build the JAR file
+                sh 'cp target/survey-0.0.1-SNAPSHOT.jar'  // Assuming Maven is used to build the JAR file
                 sh 'docker login -u ajagadis -p ${DOCKERHUB_PASS}'
                 sh 'docker build -t ajagadis/645 .'
             }
