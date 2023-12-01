@@ -18,13 +18,13 @@ pipeline {
                 sh 'java -version'
                 sh 'mvn clean install'  // Assuming Maven is used to build the JAR file
                 sh 'docker login -u ajagadis -p ${DOCKERHUB_PASS}'
-                sh 'docker build -t ajagadis/645_survey .'
+                sh 'docker build -t ajagadis/645 .'
             }
         }
         stage("Pushing image to docker") {
             steps {
                 script {
-                    sh 'docker push ajagadis/645_survey'
+                    sh 'docker push ajagadis/645'
                 }
             }
         }
