@@ -18,13 +18,13 @@ pipeline {
                 sh 'java -version'
                 sh 'cp target/survey-0.0.1-SNAPSHOT.jar .'  
                 sh 'docker login -u ajagadis -p ${DOCKERHUB_PASS}'
-                sh 'docker build -t ajagadis/645 .'
+                sh 'docker build -t ajagadis/645_survey .'
             }
         }
         stage("Pushing image to docker") {
             steps {
                 script {
-                    sh 'docker push ajagadis/645'
+                    sh 'docker push ajagadis/645_survey'
                 }
             }
         }
