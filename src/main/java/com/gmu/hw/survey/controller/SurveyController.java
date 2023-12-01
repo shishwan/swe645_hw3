@@ -21,7 +21,7 @@ public class SurveyController {
 
     @GetMapping("/home")
     public String home(){
-        return  "Campus Survey APP";
+        return  "Campus Survey APP running on rancher";
     }
 
 
